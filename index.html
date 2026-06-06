@@ -237,16 +237,16 @@
 
       <div class="player-controls">
         <div class="control-buttons" aria-label="Playback controls">
-          <button type="button" aria-label="Previous track"><i class="fa-solid fa-backward-step"></i></button>
+          <button class="previous-track" type="button" aria-label="Previous track"><i class="fa-solid fa-backward-step"></i></button>
           <button class="play-toggle" type="button" aria-label="Pause">
-            <i class="fa-solid fa-pause"></i>
+            <i class="fa-solid fa-play"></i>
           </button>
-          <button type="button" aria-label="Next track"><i class="fa-solid fa-forward-step"></i></button>
+          <button class="next-track" type="button" aria-label="Next track"><i class="fa-solid fa-forward-step"></i></button>
         </div>
         <div class="progress-wrap">
-          <span id="elapsed-time">1:18</span>
-          <input id="progress-slider" type="range" min="0" max="100" value="32" aria-label="Song progress" />
-          <span>3:42</span>
+          <span id="elapsed-time">0:00</span>
+          <input id="progress-slider" type="range" min="0" max="100" value="0" aria-label="Song progress" />
+          <span id="duration-time">0:00</span>
         </div>
       </div>
 
@@ -254,6 +254,7 @@
         <button type="button" aria-label="Volume"><i class="fa-solid fa-volume-high"></i></button>
         <input id="volume-slider" type="range" min="0" max="100" value="74" aria-label="Volume level" />
       </div>
+      <audio id="audio-player" preload="metadata"></audio>
     </footer>
   </div>
 
