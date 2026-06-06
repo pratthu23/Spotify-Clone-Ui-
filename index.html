@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Web Player Clone</title>
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <a class="brand" href="#" aria-label="Spotify home">
+        <i class="fa-brands fa-spotify" aria-hidden="true"></i>
+        <span>Spotify</span>
+      </a>
+
+      <nav class="nav-list" aria-label="Main menu">
+        <button class="nav-item active" type="button">
+          <i class="fa-solid fa-house" aria-hidden="true"></i>
+          <span>Home</span>
+        </button>
+        <button class="nav-item" type="button">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <span>Search</span>
+        </button>
+        <button class="nav-item" type="button">
+          <i class="fa-solid fa-book" aria-hidden="true"></i>
+          <span>Your Library</span>
+        </button>
+      </nav>
+
+      <div class="library-actions" aria-label="Library actions">
+        <button class="action-item" type="button">
+          <span class="action-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+          <span>Create Playlist</span>
+        </button>
+        <button class="action-item" type="button">
+          <span class="action-icon liked"><i class="fa-solid fa-heart" aria-hidden="true"></i></span>
+          <span>Liked Songs</span>
+        </button>
+      </div>
+
+      <ul class="playlist-links" aria-label="Saved playlists">
+        <li><a href="#">Daily Mix 1</a></li>
+        <li><a href="#">Discover Weekly</a></li>
+        <li><a href="#">Release Radar</a></li>
+        <li><a href="#">Acoustic Covers</a></li>
+        <li><a href="#">Night Drive</a></li>
+        <li><a href="#">Throwback Hits</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <header class="top-bar" aria-label="Page controls">
+        <div class="history-controls" aria-hidden="true">
+          <button type="button"><i class="fa-solid fa-chevron-left"></i></button>
+          <button type="button"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <button class="profile-button" type="button">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&q=80" alt="" />
+          <span>Premium</span>
+          <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <section class="greeting-section" aria-labelledby="greeting-heading">
+        <h1 id="greeting-heading">Good Morning</h1>
+        <div class="recent-grid" aria-label="Recently played">
+          <article class="recent-card">
+            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=240&q=80" alt="Concert stage lights" />
+            <h2>Liked Songs</h2>
+            <button class="play-fab" type="button" aria-label="Play Liked Songs"><i class="fa-solid fa-play"></i></button>
+          </article>
+          <article class="recent-card">
+            <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=240&q=80" alt="Vinyl record player" />
+            <h2>Daily Mix 1</h2>
+            <button class="play-fab" type="button" aria-label="Play Daily Mix 1"><i class="fa-solid fa-play"></i></button>
+          </article>
+          <article class="recent-card">
+            <img src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?auto=format&fit=crop&w=240&q=80" alt="Headphones on desk" />
+            <h2>Discover Weekly</h2>
+            <button class="play-fab" type="button" aria-label="Play Discover Weekly"><i class="fa-solid fa-play"></i></button>
+          </article>
+          <article class="recent-card">
+            <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=240&q=80" alt="Studio mixing console" />
+            <h2>Release Radar</h2>
+            <button class="play-fab" type="button" aria-label="Play Release Radar"><i class="fa-solid fa-play"></i></button>
+          </article>
+          <article class="recent-card">
+            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=240&q=80" alt="Live singer on stage" />
+            <h2>Pop Rising</h2>
+            <button class="play-fab" type="button" aria-label="Play Pop Rising"><i class="fa-solid fa-play"></i></button>
+          </article>
+          <article class="recent-card">
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=240&q=80" alt="DJ mixer in a club" />
+            <h2>Dance Party</h2>
+            <button class="play-fab" type="button" aria-label="Play Dance Party"><i class="fa-solid fa-play"></i></button>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" aria-labelledby="popular-heading">
+        <div class="section-heading">
+          <h2 id="popular-heading">Popular playlists</h2>
+          <a href="#">Show all</a>
+        </div>
+        <div class="card-row">
+          <article class="playlist-card">
+            <div class="cover-wrap">
+              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=420&q=80" alt="Sunlit mountain landscape" />
+              <button class="play-fab" type="button" aria-label="Play Today's Top Hits"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <h3>Today's Top Hits</h3>
+            <p>The songs you cannot miss right now.</p>
+          </article>
+          <article class="playlist-card">
+            <div class="cover-wrap">
+              <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?auto=format&fit=crop&w=420&q=80" alt="Neon sign in a city" />
+              <button class="play-fab" type="button" aria-label="Play RapCaviar"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <h3>RapCaviar</h3>
+            <p>New heat from the biggest voices in hip-hop.</p>
+          </article>
+          <article class="playlist-card">
+            <div class="cover-wrap">
+              <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=420&q=80" alt="Crowd at a music festival" />
+              <button class="play-fab" type="button" aria-label="Play Viva Latino"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <h3>Viva Latino</h3>
+            <p>The hottest Latin hits, refreshed weekly.</p>
+          </article>
+          <article class="playlist-card">
+            <div class="cover-wrap">
+              <img src="https://images.unsplash.com/photo-1482442120256-9c03866de390?auto=format&fit=crop&w=420&q=80" alt="Person playing guitar" />
+              <button class="play-fab" type="button" aria-label="Play Acoustic Chill"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <h3>Acoustic Chill</h3>
+            <p>Laid-back songs for quiet focus.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" aria-labelledby="made-heading">
+        <div class="section-heading">
+          <h2 id="made-heading">Made For You</h2>
+          <a href="#">Show all</a>
+        </div>
+        <div class="card-row">
+          <article class="playlist-card">
+            <div class="cover-wrap">
+              <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=420&q=80" alt="Musician on stage" />
+              <button class="play-fab" type="button" aria-label="Play Daily Mix 2"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <h3>Daily Mix 2</h3>
+            <p>Indie favorites and new discoveries.</p>
+          </article>
+          <article class="playlist-card">
+            <div class="cover-wrap">
+              <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=420&q=80" alt="Stage lights in blue haze" />
+              <button class="play-fab" type="button" aria-label="Play On Repeat"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <h3>On Repeat</h3>
+            <p>The tracks you have on heavy rotation.</p>
+          </article>
+          <article class="playlist-card">
+            <div class="cover-wrap">
+              <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=420&q=80" alt="Outdoor concert stage" />
+              <button class="play-fab" type="button" aria-label="Play Time Capsule"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <h3>Time Capsule</h3>
+            <p>Throwbacks selected from your history.</p>
+          </article>
+          <article class="playlist-card">
+            <div class="cover-wrap">
+              <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=420&q=80" alt="Microphone in warm light" />
+              <button class="play-fab" type="button" aria-label="Play Blend"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <h3>Blend</h3>
+            <p>A shared mix made from familiar favorites.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" aria-labelledby="charts-heading">
+        <div class="section-heading">
+          <h2 id="charts-heading">Charts</h2>
+          <a href="#">Show all</a>
+        </div>
+        <div class="card-row">
+          <article class="playlist-card">
+            <div class="cover-wrap">
+              <img src="https://images.unsplash.com/photo-1508973379184-7517410fb0bc?auto=format&fit=crop&w=420&q=80" alt="City skyline at sunset" />
+              <button class="play-fab" type="button" aria-label="Play Global Top 50"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <h3>Global Top 50</h3>
+            <p>Your daily update of the most played tracks.</p>
+          </article>
+          <article class="playlist-card">
+            <div class="cover-wrap">
+              <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=420&q=80" alt="Forest road" />
+              <button class="play-fab" type="button" aria-label="Play Viral Hits"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <h3>Viral Hits</h3>
+            <p>Tracks lighting up streams and feeds.</p>
+          </article>
+          <article class="playlist-card">
+            <div class="cover-wrap">
+              <img src="https://images.unsplash.com/photo-1494783367193-149034c05e8f?auto=format&fit=crop&w=420&q=80" alt="Night sky over mountains" />
+              <button class="play-fab" type="button" aria-label="Play US Top 50"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <h3>US Top 50</h3>
+            <p>The most streamed songs in the United States.</p>
+          </article>
+          <article class="playlist-card">
+            <div class="cover-wrap">
+              <img src="https://images.unsplash.com/photo-1446057032654-9d8885db76c6?auto=format&fit=crop&w=420&q=80" alt="Busy street at night" />
+              <button class="play-fab" type="button" aria-label="Play Fresh Finds"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <h3>Fresh Finds</h3>
+            <p>Emerging artists and new chart climbers.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="player-bar" aria-label="Music player">
+      <div class="now-playing">
+        <img src="https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?auto=format&fit=crop&w=120&q=80" alt="Album cover for Midnight City" />
+        <div class="track-meta">
+          <strong>Midnight City</strong>
+          <span>Neon Skyline</span>
+        </div>
+        <button class="heart-button" type="button" aria-label="Save to Liked Songs"><i class="fa-regular fa-heart"></i></button>
+      </div>
+
+      <div class="player-controls">
+        <div class="control-buttons" aria-label="Playback controls">
+          <button type="button" aria-label="Previous track"><i class="fa-solid fa-backward-step"></i></button>
+          <button class="play-toggle" type="button" aria-label="Pause">
+            <i class="fa-solid fa-pause"></i>
+          </button>
+          <button type="button" aria-label="Next track"><i class="fa-solid fa-forward-step"></i></button>
+        </div>
+        <div class="progress-wrap">
+          <span id="elapsed-time">1:18</span>
+          <input id="progress-slider" type="range" min="0" max="100" value="32" aria-label="Song progress" />
+          <span>3:42</span>
+        </div>
+      </div>
+
+      <div class="volume-control">
+        <button type="button" aria-label="Volume"><i class="fa-solid fa-volume-high"></i></button>
+        <input id="volume-slider" type="range" min="0" max="100" value="74" aria-label="Volume level" />
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
